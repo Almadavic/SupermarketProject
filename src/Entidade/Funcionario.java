@@ -1,5 +1,7 @@
 package Entidade;
 
+import Erro.Personalizado;
+
 public abstract class Funcionario {
 private String nome=null;
 private Double salario=null;
@@ -32,7 +34,7 @@ public abstract String formatado();
 
 
 
-public abstract void verificacao();
+public abstract void verificacao() throws Personalizado;
 
 
 

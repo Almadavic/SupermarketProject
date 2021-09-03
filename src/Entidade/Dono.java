@@ -1,5 +1,7 @@
 package Entidade;
 
+
+
 public class Dono {
 private String login=null;
 private String senha=null;

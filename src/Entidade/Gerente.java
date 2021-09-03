@@ -1,5 +1,7 @@
 package Entidade;
 
+import Erro.Personalizado;
+
 public class Gerente extends Funcionario {
 private Double comissao=null;
 
@@ -31,9 +33,11 @@ public String formatado() {
 }
 
 @Override
-public void verificacao() {
-	// TODO Auto-generated method stub
+public void verificacao() throws Personalizado {
 	
+	if(getNome()==null || getSalario()==null || getDesconto()==null || comissao==null) {
+		throw new Personalizado("Não pode ter valores nulos");
+	}
 }
 
 
