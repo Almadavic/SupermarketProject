@@ -1,6 +1,9 @@
 package Entidade;
 
-public class ItemVenda {
+import java.util.Collection;
+import java.util.Iterator;
+
+public class ItemVenda  {
 private Integer numero=null;
 private String nomeProduto=null;
 private Double valorUnitario=null;
@@ -10,17 +13,18 @@ public ItemVenda() {
 	
 }
 
-public ItemVenda(Integer numero, String nomeProduto, Double valorUnitario, Integer quantidade) {
-	this.numero = numero;
+public ItemVenda( String nomeProduto, Double valorUnitario, Integer quantidade) {
 	this.nomeProduto = nomeProduto;
 	this.valorUnitario = valorUnitario;
 	this.quantidade = quantidade;
 }
 
 
-
+private Double subTotal;
 public double subTotal() {
-	return quantidade*valorUnitario;
+	double subTotal =quantidade*valorUnitario;
+	this.subTotal=subTotal;
+	return subTotal;
 }
 
 
@@ -64,6 +68,18 @@ public Integer getQuantidade() {
 public void setQuantidade(Integer quantidade) {
 	this.quantidade = quantidade;
 }
+
+
+
+public Double getSubTotal() {
+	return subTotal;
+}
+
+public void setSubTotal(Double subTotal) {
+	this.subTotal = subTotal;
+}
+
+
 
 
 
